@@ -1,54 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div>
-    <h1>Hello</h1>
-    <p>🎀 🎁 🎀 🎁 🎀  </p>
-<button onclick="showMessage()">Click me</button>
+        <h1>Hello</h1>
+        <p>🎀 🎁 🎀 🎁 🎀 </p>
+        <button onclick="showMessage()">Click me</button>
 
-<p id="message"></p>
+        <p id="message"></p>
 
-<script>
-function showMessage() {
-    document.getElementById("message").innerText = "🎀 Hello Sejin! Valentine! 🎀";
-}
-</script>
-
-
-    <style>
-        body{
-            background-color: tomato;
-        }
-        h1{
-            font-family: monospace;
-            color: lemonchiffon;
-            filter: drop-shadow(0 0 3px magenta);
-            font-size: 5rem;
-        }
-        img{
-            width: 25%;
-            animation: 3s linear 1s slide-in;
-        }
-        @keyframes slide-in{
-            from {
-                transform: translateY(110vh);
-                opacity: 0;
+        <script>
+            function showMessage() {
+                document.getElementById("message").innerText = "🎀 Hello Sejin! Valentine! 🎀";
             }
-            to {
-                transform: translateY(0);
-                opacity: 1;
+        </script>
+
+
+        <style>
+            body {
+                background-color: tomato;
             }
-        }
-    </style>
+
+            h1 {
+                font-family: monospace;
+                color: lemonchiffon;
+                filter: drop-shadow(0 0 3px magenta);
+                font-size: 5rem;
+                margin-bottom: 0;
+                text-align: center;
+
+            }
+
+            .raccoon {
+                width: 25%;
+                animation: 1s linear 1s slide-in both;
+            }
+
+            @keyframes slide-in {
+                from {
+                    transform: translateY(110vh);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            p {
+                font-size: 36pt;
+                margin: 0;
+            }
+
+            .footprints {
+                rotate: 90deg;
+                width: 60%;
+                animation: ease-in 4s step;
+            }
+
+            @keyframes step {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
     </div>
     <div>
-        <img src="raccoon.png" alt="A Raccoon!">
+        <img class="raccoon" src="raccoon.png" alt="A Raccoon!">
     </div>
-   
+    <div>
+        <img class="footprints" src="footprint.png" alt="footprints">
+    </div>
+
 </html>
