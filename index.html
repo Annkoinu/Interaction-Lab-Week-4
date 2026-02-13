@@ -31,7 +31,17 @@ function showMessage() {
         }
         img{
             width: 25%;
-            filter: contrast(0.5);
+            animation: 3s linear 1s slide-in;
+        }
+        @keyframes slide-in{
+            from {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
     </div>
